@@ -69,7 +69,9 @@ elif test -n "${ZSH_VERSION-}" ; then
     _LP_USER_SYMBOL="%n"
     _LP_HOST_SYMBOL="%m"
     _LP_FQDN_SYMBOL="%M"
-    _LP_TIME_SYMBOL="%*"
+    # reference: http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html#Date-and-time
+    # https://man7.org/linux/man-pages/man3/strftime.3.html
+    _LP_TIME_SYMBOL="%D{%y%m%d %H%M}"
     _LP_MARK_SYMBOL='%(!.#.%%)'
     _LP_PWD_SYMBOL="%~"
     _LP_DIR_SYMBOL="%1~"
